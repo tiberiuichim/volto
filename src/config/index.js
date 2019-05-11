@@ -44,6 +44,7 @@ export const settings = {
   richTextEditorPlugins: plugins,
   ToHTMLRenderers,
   ToHTMLOptions,
+  notSupportedBrowsers: ['ie', 'node'], // 'node' is required since it means that the client has experienced a problem.
 };
 
 export const widgets = {

@@ -14,7 +14,13 @@ import { renderRoutes } from 'react-router-config';
 
 import Error from '../../../error';
 
-import { Breadcrumbs, Footer, Header, Messages } from '../../../components';
+import {
+  Breadcrumbs,
+  Footer,
+  Header,
+  Messages,
+  OutdatedBrowser,
+} from '../../../components';
 import { BodyClass, getBaseUrl, getView } from '../../../helpers';
 import {
   getBreadcrumbs,
@@ -110,6 +116,7 @@ export class AppComponent extends Component {
         <Segment basic className="content-area">
           <main>
             <Messages />
+            <OutdatedBrowser />
             {this.state.hasError ? (
               <Error
                 message={this.state.error.message}
