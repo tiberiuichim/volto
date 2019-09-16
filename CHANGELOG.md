@@ -1,6 +1,14 @@
 # Change Log
 
-## 3.1.1 (unreleased)
+## 4.0.0 (unreleased)
+
+### Added
+
+### Changes
+
+- Fix test failure for `VersionOverview` component in master after release process @sneridagh
+
+## 4.0.0-alpha.0 (2019-09-13)
 
 ### Added
 
@@ -11,10 +19,14 @@
 - Add sidebar support for components @sneridagh
 - Add Volto version number in control panel @nzambello
 - Remove Mosaic component @tisto
+- Added toast component in actions @nzambello
 - Added translations to italian @nzambello
 - Add table tile @robgietema
+- Add image sidebar @sneridagh @gomez
+- Add delete file button to file Widget @jackahl
 - Add link redirect view @robgietema
 - Add proper unique id to all fields, based on the fieldset and field name @sneridagh
+- Add QueryString widget @robgietema @sneridagh
 
 ### Changes
 
@@ -37,6 +49,10 @@
 - Fix remove link entity of only a part it only removes that part, not the whole entity @robgietema
 - Add proper placeholder to the add link feature in the editor @sneridagh
 - Fix bulk workflow change in contents view @sneridagh
+- Fix regresion on uploading image to root @sneridagh
+- Fix hero tile on view if image is missing @sneridagh
+- Fix link to contextual contents in toolbar @sneridagh
+- Add automatically the wildcard for the `SearchableText` on the @search action @sneridagh
 
 ### Internal
 
@@ -50,6 +66,7 @@
 - Add razzle-plugin-bundle-analyzer @tisto
 - Add bundlewatch @tisto
 - Add bundlesize @tisto
+- Update base buildout @sneridagh
 
 ## 3.1.0 (2019-06-14)
 
@@ -75,6 +92,9 @@
 
 ### Changes
 
+### Internal
+
+- Add cypress a11y tests. @timo
 - Fix order of arguments when sending the contact form @csenger
 - Fix @babel/core import on i18n script @sneridagh
 
