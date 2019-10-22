@@ -10,9 +10,8 @@ import { doesNodeContainClick } from 'semantic-ui-react/dist/commonjs/lib';
 import Editor from 'draft-js-plugins-editor';
 import { convertFromRaw, convertToRaw, EditorState } from 'draft-js';
 import createInlineToolbarPlugin from 'draft-js-inline-toolbar-plugin';
-import { defineMessages, injectIntl, intlShape } from 'react-intl';
+import { defineMessages, injectIntl } from 'react-intl';
 import { includes, isEqual } from 'lodash';
-import cx from 'classnames';
 
 import { settings } from '~/config';
 
@@ -50,7 +49,6 @@ class Edit extends Component {
     onFocusPreviousTile: PropTypes.func.isRequired,
     onFocusNextTile: PropTypes.func.isRequired,
     onSelectTile: PropTypes.func.isRequired,
-    intl: intlShape.isRequired,
   };
 
   /**
@@ -159,7 +157,11 @@ class Edit extends Component {
     this.setState(state => ({ addNewTileOpened: !state.addNewTileOpened }));
 
   handleClickOutside = e => {
-    if (this.ref && doesNodeContainClick(this.ref, e)) return;
+    if (
+      this.props.tileNode.current &&
+      doesNodeContainClick(this.props.tileNode.current, e)
+    )
+      return;
     this.setState(() => ({
       addNewTileOpened: false,
     }));
@@ -178,12 +180,7 @@ class Edit extends Component {
     const { InlineToolbar } = this.state.inlineToolbarPlugin;
 
     return (
-      <div
-        role="presentation"
-        onClick={() => this.props.onSelectTile(this.props.tile)}
-        className={cx('tile text', { selected: this.props.selected })}
-        ref={node => (this.ref = node)}
-      >
+      <>
         <Editor
           onChange={this.onChange}
           editorState={this.state.editorState}
@@ -268,7 +265,7 @@ class Edit extends Component {
             currentTile={this.props.tile}
           />
         )}
-      </div>
+      </>
     );
   }
 }

@@ -17,15 +17,11 @@ import {
   Table,
   Container,
   Divider,
+  Button,
 } from 'semantic-ui-react';
 import { find, map, isEqual } from 'lodash';
 import { toast } from 'react-toastify';
-import {
-  FormattedMessage,
-  defineMessages,
-  injectIntl,
-  intlShape,
-} from 'react-intl';
+import { FormattedMessage, defineMessages, injectIntl } from 'react-intl';
 
 import {
   createUser,
@@ -43,7 +39,7 @@ import {
   ModalForm,
   Toolbar,
   UsersControlpanelUser,
-  Icon as AddIcon,
+  Icon,
   UsersControlpanelGroups,
   Toast,
 } from '../../../components';
@@ -82,12 +78,12 @@ const messages = defineMessages({
     defaultMessage: 'Delete Group',
   },
   addUserButtonTitle: {
-    id: 'ADD NEW USER',
-    defaultMessage: 'ADD NEW USER',
+    id: 'Add new user',
+    defaultMessage: 'Add new user',
   },
   addGroupsButtonTitle: {
-    id: 'ADD NEW GROUP',
-    defaultMessage: 'ADD NEW GROUP',
+    id: 'Add new group',
+    defaultMessage: 'Add new group',
   },
   addUserFormTitle: {
     id: 'Add User',
@@ -219,7 +215,6 @@ class UsersControlpanel extends Component {
         groupname: PropTypes.string,
       }),
     ).isRequired,
-    intl: intlShape.isRequired,
   };
 
   /**
@@ -621,7 +616,7 @@ class UsersControlpanel extends Component {
       ? this.state.groupToDelete.id
       : '';
     return (
-      <Container>
+      <Container className="users-control-panel">
         <Helmet title="Users and Groups" />
         <div className="container">
           <Confirm
@@ -720,9 +715,7 @@ class UsersControlpanel extends Component {
                     messages.addUserFormRolesTitle,
                   ),
                   type: 'array',
-                  items: {
-                    choices: this.props.roles.map(role => [role.id, role.id]),
-                  },
+                  choices: this.props.roles.map(role => [role.id, role.id]),
                   description: '',
                 },
                 groups: {
@@ -730,12 +723,7 @@ class UsersControlpanel extends Component {
                     messages.addUserGroupNameTitle,
                   ),
                   type: 'array',
-                  items: {
-                    choices: this.props.groups.map(group => [
-                      group.id,
-                      group.id,
-                    ]),
-                  },
+                  choices: this.props.groups.map(group => [group.id, group.id]),
                   description: '',
                 },
               },
@@ -796,9 +784,7 @@ class UsersControlpanel extends Component {
                     messages.addGroupsFormRolesTitle,
                   ),
                   type: 'array',
-                  items: {
-                    choices: this.props.roles.map(role => [role.id, role.id]),
-                  },
+                  choices: this.props.roles.map(role => [role.id, role.id]),
                   description: '',
                 },
               },
@@ -867,16 +853,16 @@ class UsersControlpanel extends Component {
           </Form>
           <Segment clearing className="actions">
             {this.props.intl.formatMessage(messages.addUserButtonTitle)}
-            <AddIcon
-              name={addSvg}
-              size="30px"
-              color="#007eb1"
-              title="Add"
+            <Button
+              basic
+              primary
+              floated="right"
               onClick={() => {
                 this.setState({ showAddUser: true });
               }}
-              className="icon-adduser"
-            />
+            >
+              <Icon name={addSvg} size="30px" color="#007eb1" title="Add" />
+            </Button>
           </Segment>
           <Divider />
           <Segment>
@@ -934,16 +920,16 @@ class UsersControlpanel extends Component {
           </Form>
           <Segment clearing className="actions">
             {this.props.intl.formatMessage(messages.addGroupsButtonTitle)}
-            <AddIcon
-              name={addSvg}
-              size="30px"
-              color="#007eb1"
-              title="Add"
+            <Button
+              basic
+              primary
+              floated="right"
               onClick={() => {
                 this.setState({ showAddGroup: true });
               }}
-              className="icon-adduser"
-            />
+            >
+              <Icon name={addSvg} size="30px" color="#007eb1" title="Add" />
+            </Button>
           </Segment>
         </Segment.Group>
         <Portal node={__CLIENT__ && document.getElementById('toolbar')}>
@@ -953,7 +939,7 @@ class UsersControlpanel extends Component {
             inner={
               <>
                 <Link to="/controlpanel" className="item">
-                  <AddIcon
+                  <Icon
                     name={backSVG}
                     className="contents circled"
                     size="30px"
@@ -966,7 +952,7 @@ class UsersControlpanel extends Component {
                   aria-label={this.props.intl.formatMessage(messages.save)}
                   onClick={this.onSubmit}
                 >
-                  <AddIcon
+                  <Icon
                     name={saveSVG}
                     className="circled"
                     size="30px"
@@ -974,7 +960,7 @@ class UsersControlpanel extends Component {
                   />
                 </button>
                 <button className="cancel" onClick={this.onCancel}>
-                  <AddIcon
+                  <Icon
                     name={clearSVG}
                     className="circled"
                     aria-label={this.props.intl.formatMessage(messages.cancel)}
