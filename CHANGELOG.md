@@ -6,12 +6,40 @@
 
 ### Changes
 
-- Removed wrapper `p` tag from image block in edit mode for better layout purposes @sneridagh
+- Fix icon in `TextWidget` @sneridagh
+- impprove documentation for `Icon` @jackahl
 
 ### Internal
 
+- Add internationalization section to docs @pgrunewald
+
+## 4.0.0-alpha.10 (2019-10-31)
+
+### Added
+
+- Add Node 12 support @timo
+
+### Changes
+
+- Removed wrapper `p` tag from image block in edit mode for better layout purposes @sneridagh
+- Make SelectWidget more robust @robgietema
+- Add image to listing view @robgietema
+- Fix `SchemaWidget` @robgietema
+- Move styles import to a separate file @pnicolli
+- Fix crash when user enters only whitespace in required fields @JeffersonBledsoe
+- Fix the _real_ focus thief in new tiles @sneridagh
+
+### Internal
+
+- Report port number on startup @fredvd
 - Retry Cypress tests two times before failing @timo
 - Add waitForResourceToLoad to Cypress @timo
+- Add use cases to README @timo
+- Re-enabled Guillotina tests @sneridagh
+- Remove Docker build from tests @sneridagh
+- Removed Enzyme @pnicolli
+- Added testing-library (react and cypress) @pnicolli
+- Tiles -> Blocks renaming @sneridagh
 
 ## 4.0.0-alpha.9 (2019-10-09)
 
