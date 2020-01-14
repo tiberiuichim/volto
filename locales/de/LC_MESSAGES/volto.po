@@ -1137,11 +1137,15 @@ msgstr ""
 
 #: components/manage/Blocks/Table/Edit
 msgid "Table"
-msgstr ""
+msgstr "Tabelle"
 
 #: components/manage/Blocks/Table/Edit
 msgid "Table color inverted"
 msgstr ""
+
+#: components/manage/Blocks/ToC/View
+msgid "Table of Contents"
+msgstr "Inhaltsverzeichnis"
 
 #: components/manage/Contents/Contents
 #: components/manage/Contents/ContentsTagsModal
@@ -1435,7 +1439,7 @@ msgstr ""
 
 #: config/Blocks
 msgid "table"
-msgstr ""
+msgstr "Tabelle"
 
 #: config/Blocks
 msgid "text"
@@ -1444,6 +1448,10 @@ msgstr "Text"
 #: config/Blocks
 msgid "title"
 msgstr "Titel"
+
+#: config/Blocks
+msgid "toc"
+msgstr "Inhaltsverzeichnis"
 
 #: components/manage/Toolbar/PersonalTools
 msgid "user avatar"
