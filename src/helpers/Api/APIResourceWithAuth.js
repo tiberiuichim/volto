@@ -22,8 +22,11 @@ export const getAPIResourceWithAuth = req =>
     } else {
       apiPath = settings.apiPath;
     }
+    let url = `${apiPath}${req.path}`
+    console.log("Api request: ",
+      url, settings.internalApiPath, settings.apiPath)
     const request = superagent
-      .get(`${apiPath}${req.path}`)
+      .get(url)
       .responseType('blob');
     const authToken = cookie.load('auth_token');
     if (authToken) {
@@ -31,6 +34,7 @@ export const getAPIResourceWithAuth = req =>
     }
     request.end((error, res = {}) => {
       if (error) {
+        console.log('Error in api request', error)
         resolve(res || error);
       } else {
         resolve(res);
