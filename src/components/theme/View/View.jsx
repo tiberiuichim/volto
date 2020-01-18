@@ -111,10 +111,10 @@ class View extends Component {
    */
   UNSAFE_componentWillMount() {
     this.props.listActions(getBaseUrl(this.props.pathname));
-    this.props.getContent(
-      getBaseUrl(this.props.pathname),
-      this.props.versionId,
-    );
+    // this.props.getContent(
+    //   getBaseUrl(this.props.pathname),
+    //   this.props.versionId,
+    // );
   }
 
   /**
@@ -126,10 +126,10 @@ class View extends Component {
   UNSAFE_componentWillReceiveProps(nextProps) {
     if (nextProps.pathname !== this.props.pathname) {
       this.props.listActions(getBaseUrl(nextProps.pathname));
-      this.props.getContent(
-        getBaseUrl(nextProps.pathname),
-        this.props.versionId,
-      );
+      // this.props.getContent(
+      //   getBaseUrl(nextProps.pathname),
+      //   this.props.versionId,
+      // );
     }
 
     if (nextProps.actions.object_buttons) {
@@ -258,7 +258,7 @@ export default compose(
     (state, props) => ({
       actions: state.actions.actions,
       token: state.userSession.token,
-      content: state.content.data,
+      content: state.prefetch[props.location.pathname] || state.content.data,
       error: state.content.get.error,
       pathname: props.location.pathname,
       versionId:

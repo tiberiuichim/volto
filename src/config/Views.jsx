@@ -1,4 +1,5 @@
 import DefaultView from '@plone/volto/components/theme/View/DefaultView';
+import HomepageView from '@plone/volto/components/theme/View/HomepageView';
 import FileView from '@plone/volto/components/theme/View/FileView';
 import ImageView from '@plone/volto/components/theme/View/ImageView';
 import ListingView from '@plone/volto/components/theme/View/ListingView';
@@ -18,6 +19,7 @@ export const layoutViews = {
 
 // Content Types View Registry
 export const contentTypesViews = {
+  'Plone Site': HomepageView,
   'News Item': NewsItemView,
   File: FileView,
   Image: ImageView,

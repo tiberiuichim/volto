@@ -160,7 +160,6 @@ class App extends Component {
             />
           }
         />
-        <GenericErrorsToast />
       </Fragment>
     );
   }

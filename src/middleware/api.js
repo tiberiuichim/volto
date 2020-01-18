@@ -48,6 +48,8 @@ export default api => ({ dispatch, getState }) => next => action => {
     return action(dispatch, getState);
   }
 
+  console.log('action api', action);
+
   const { request, type, ...rest } = action;
   let actionPromise;
 

@@ -15,6 +15,7 @@ export SearchWidget from '@plone/volto/components/theme/SearchWidget/SearchWidge
 export Title from '@plone/volto/components/theme/Title/Title';
 export App from '@plone/volto/components/theme/App/App';
 export DefaultView from '@plone/volto/components/theme/View/DefaultView';
+export HomepageView from '@plone/volto/components/theme/View/HomepageView';
 export FileView from '@plone/volto/components/theme/View/FileView';
 export ImageView from '@plone/volto/components/theme/View/ImageView';
 export NewsItemView from '@plone/volto/components/theme/View/NewsItemView';
