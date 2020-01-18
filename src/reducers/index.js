@@ -30,6 +30,7 @@ import users from '@plone/volto/reducers/users/users';
 import userSession from '@plone/volto/reducers/userSession/userSession';
 import vocabularies from '@plone/volto/reducers/vocabularies/vocabularies';
 import workflow from '@plone/volto/reducers/workflow/workflow';
+// import errors from '@plone/volto/reducers/errors/errors';
 
 /**
  * Root reducer.
@@ -49,6 +50,7 @@ const reducers = {
   clipboard,
   diff,
   emailNotification,
+  // errors,
   form,
   groups,
   history,
