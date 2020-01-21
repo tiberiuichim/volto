@@ -260,7 +260,7 @@ export default compose(
     (state, props) => ({
       actions: state.actions.actions,
       token: state.userSession.token,
-      content: state.prefetch[props.location.pathname] || state.content.data,
+      content: state.prefetch[props.location.pathname], //  || state.content.data
       error: state.content.get.error,
       pathname: props.location.pathname,
       versionId:
