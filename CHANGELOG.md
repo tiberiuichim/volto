@@ -4,11 +4,23 @@
 
 ### Added
 
+- Added listing block @pnicolli @rodfersou @sneridagh @giuliaghisini
+
+### Changes
+
+- fix bug in TokenWidget and ArrayWidget when removing all elements. @giuliaghisini
+- fix listing block customization @giuliaghisini
+
+## 4.0.0-alpha.29 (2020-01-18)
+
 ### Changes
 
 - Avoid console warnings in QuerystringWidget @tiberich
 
 - Avoid console warnings in AddLinkForm.jsx @tiberiuichim
+
+- Remove dangling reference to external data in Image block not used anymore, causing confusion and lead to dead (and wrong) code @sneridagh
+- Remove last remains of the append secondary actions, remove Image block toolbar. Update i18n, fix small issues in Image block @sneridagh
 
 ## 4.0.0-alpha.28 (2020-01-17)
 

@@ -145,7 +145,7 @@ export class TokenWidget extends Component {
     this.setState({ selectedOption });
     this.props.onChange(
       this.props.id,
-      selectedOption.map(item => item.value),
+      selectedOption ? selectedOption.map(item => item.value) : null,
     );
   }
 

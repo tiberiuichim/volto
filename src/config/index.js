@@ -45,6 +45,7 @@ export const settings = {
   ToHTMLRenderers,
   ToHTMLOptions,
   imageObjects: ['Image'],
+  listingPreviewImageField: 'image',
   customStyleMap: null,
 };
 
