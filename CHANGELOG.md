@@ -4,12 +4,26 @@
 
 ### Added
 
+### Changes
+
+## 4.0.0-alpha.31 (2020-01-22)
+
+### Changes
+
+- fix `SelectWidget`, when there is a vocabulary and no choices @sneridagh
+
+## 4.0.0-alpha.30 (2020-01-22)
+
+### Added
+
 - Added listing block @pnicolli @rodfersou @sneridagh @giuliaghisini
 
 ### Changes
 
 - fix bug in TokenWidget and ArrayWidget when removing all elements. @giuliaghisini
 - fix listing block customization @giuliaghisini
+- fix Querystring widgets failing to render if the `MultipleSelectionWidget` field applied is not included in the site vocabulary returned by `@querystring`. This applies to `Subject` field when the tag value is not there any more. @sneridagh
+- fix QueryString widget on creation when query is empty, fixed broken when editing after too @sneridagh
 
 ## 4.0.0-alpha.29 (2020-01-18)
 
