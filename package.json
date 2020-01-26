@@ -224,10 +224,6 @@
     "connected-react-router": "6.6.1",
     "coveralls": "3.0.2",
     "css-loader": "2.1.1",
-    "cypress": "3.6.1",
-    "cypress-axe": "0.4.1",
-    "cypress-file-upload": "3.5.0",
-    "cypress-plugin-retries": "1.5.0",
     "draft-js": "0.10.5",
     "draft-js-block-breakout-plugin": "2.0.1",
     "draft-js-buttons": "2.0.2",
@@ -253,9 +249,6 @@
     "hamburgers": "1.1.3",
     "handlebars": "4.3.0",
     "history": "4.10.1",
-    "husky": "4.2.1",
-    "jest-css-modules": "1.1.0",
-    "jest-file": "1.0.0",
     "js-yaml": "3.13.1",
     "jsonwebtoken": "8.3.0",
     "jwt-decode": "2.2.0",
@@ -282,7 +275,6 @@
     "raven": "2.6.4",
     "raven-js": "3.27.2",
     "razzle": "3.0.0",
-    "razzle-plugin-bundle-analyzer": "1.1.3",
     "react": "16.12.0",
     "react-anchor-link-smooth-scroll": "1.0.12",
     "react-animate-height": "2.0.17",
@@ -314,7 +306,6 @@
     "redux-devtools-extension": "2.13.8",
     "redux-mock-store": "1.5.3",
     "redux-thunk": "2.3.0",
-    "release-it": "12.4.3",
     "semantic-ui-less": "2.4.1",
     "semantic-ui-react": "0.88.1",
     "semver": "5.6.0",
@@ -333,7 +324,17 @@
     "webpack": "4.41.2",
     "xmlrpc": "1.3.2"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "cypress": "3.6.1",
+    "cypress-axe": "0.4.1",
+    "cypress-file-upload": "3.5.0",
+    "cypress-plugin-retries": "1.5.0",
+    "release-it": "12.4.3",
+    "husky": "4.2.1",
+    "jest-css-modules": "1.1.0",
+    "razzle-plugin-bundle-analyzer": "1.1.3",
+    "jest-file": "1.0.0"
+  },
   "resolutions": {
     "browserslist": "4.8.3"
   }
