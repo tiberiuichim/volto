@@ -22,15 +22,15 @@ export const getAPIResourceWithAuth = req =>
     } else {
       apiPath = settings.apiPath;
     }
-    const request = superagent
-      .get(`${apiPath}${req.path}`)
-      .responseType('blob');
+    let url = `${apiPath}${req.path}`;
+    const request = superagent.get(url).responseType('blob');
     const authToken = cookie.load('auth_token');
     if (authToken) {
       request.set('Authorization', `Bearer ${authToken}`);
     }
     request.end((error, res = {}) => {
       if (error) {
+        console.log('Error in api request', error);
         resolve(res || error);
       } else {
         resolve(res);
