@@ -6,6 +6,41 @@
 
 ### Changes
 
+## 4.0.0-alpha.34 (2020-01-26)
+
+### Changes
+
+- Fix token expiration/renewer timer, this fixes #674 @sneridagh
+
+## 4.0.0-alpha.33 (2020-01-26)
+
+### Changes
+
+- Updated Maps block to the sidebar and image block look and feel @sneridagh
+- Update video block to the sidebar and get the image block look and feel @sneridagh
+
+### Internal
+
+- Fix and update to latest husky and lint-staged @sneridagh
+- Fix for i18n to use defaultMessages instead to default to the id @sneridagh
+- Update `babel-plugin-react-intl` to latest @sneridagh
+
+## 4.0.0-alpha.32 (2020-01-24)
+
+### Added
+
+- Lead image behavior block @sneridagh sponsored by CMSCOM.jp @terapyon
+
+### Changes
+
+- Make login component honors the returnUrl prop if called from any pathname @sneridagh
+
+### Internal
+
+- Try to improve the realibility of the Cypress tests, reorganize commands @sneridagh
+- Upgrade to Plone 5.2.1, add `Products.PloneHotfix20200121` @sneridagh
+- Force global use of `browserslist` package to get rid of message on build @sneridagh
+
 ## 4.0.0-alpha.31 (2020-01-22)
 
 ### Changes
