@@ -20,7 +20,13 @@ import { settings } from '~/config';
 
 import Error from '../../../error';
 
-import { Breadcrumbs, Footer, Header, Icon } from '../../../components';
+import {
+  Breadcrumbs,
+  Footer,
+  Header,
+  Icon,
+  OutdatedBrowser,
+} from '../../../components';
 import { BodyClass, getBaseUrl, getView } from '../../../helpers';
 import {
   getBreadcrumbs,
@@ -131,6 +137,7 @@ class App extends Component {
         <Breadcrumbs pathname={path} />
         <Segment basic className="content-area">
           <main>
+            <OutdatedBrowser />
             {this.state.hasError ? (
               <Error
                 message={this.state.error.message}

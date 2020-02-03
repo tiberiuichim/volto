@@ -47,6 +47,7 @@ export const settings = {
   imageObjects: ['Image'],
   listingPreviewImageField: 'image',
   customStyleMap: null,
+  notSupportedBrowsers: ['ie'],
 };
 
 export const widgets = {
