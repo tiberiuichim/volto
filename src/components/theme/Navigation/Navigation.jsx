@@ -71,7 +71,7 @@ class Navigation extends Component {
    * @returns {undefined}
    */
   UNSAFE_componentWillMount() {
-    if (!settings.minimizeNetworkFetch)
+    if (!settings.contentExpand.includes('navigation'))
       this.props.getNavigation(getBaseUrl(this.props.pathname));
   }
 
@@ -83,7 +83,7 @@ class Navigation extends Component {
    */
   UNSAFE_componentWillReceiveProps(nextProps) {
     if (
-      !settings.minimizeNetworkFetch &&
+      !settings.contentExpand.includes('navigation') &&
       nextProps.pathname !== this.props.pathname
     ) {
       this.props.getNavigation(getBaseUrl(nextProps.pathname));

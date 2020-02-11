@@ -34,7 +34,7 @@ export const settings = {
   minimizeNetworkFetch: true,
   // should also include ``types`` here, but it explicitely raises Unauthorized
   // for anonymous in plone.restapi
-  contentExpand: ['breadcrumbs', 'navigation', 'actions', 'workflow'],
+  contentExpand: ['breadcrumbs', 'actions', 'workflow'],
   nonContentRoutes,
   extendedBlockRenderMap,
   blockStyleFn,
