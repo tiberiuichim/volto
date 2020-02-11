@@ -194,7 +194,7 @@ export default compose(
       key: 'navigation',
       promise: ({ location, store: { dispatch } }) =>
         __SERVER__ &&
-        !settings.minimizeNetworkFetch &&
+        !settings.contentExpand.includes('navigation') &&
         dispatch(getNavigation(getBaseUrl(location.pathname))),
     },
     {
