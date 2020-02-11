@@ -12,6 +12,7 @@ git merge origin/fix_querystring_ssr_edit
 git merge origin/fix_querystring_missing_value
 git merge origin/fix_querystring_child_warning
 git merge origin/missing_key_in_addlinkform
+git merge tiberiuichim/navigation-refactoring
 git merge origin/master
 
 
