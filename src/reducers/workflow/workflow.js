@@ -8,7 +8,7 @@ import {
   GET_WORKFLOW,
   GET_WORKFLOW_MULTIPLE,
   GET_CONTENT,
-} from '../../constants/ActionTypes';
+} from '@plone/volto/constants/ActionTypes';
 import { settings } from '~/config';
 
 const initialState = {
