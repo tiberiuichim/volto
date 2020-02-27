@@ -4,7 +4,7 @@
  */
 
 import { settings } from '~/config';
-import { LIST_ACTIONS } from '@plone/volto/constants/ActionTypes';
+import { LIST_ACTIONS, GET_CONTENT } from '@plone/volto/constants/ActionTypes';
 
 const initialState = {
   error: null,
