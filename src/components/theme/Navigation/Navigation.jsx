@@ -132,7 +132,7 @@ class Navigation extends Component {
   render() {
     return (
       <nav className="navigation">
-        <div className="hamburger-wrapper mobile only">
+        <div className="hamburger-wrapper mobile tablet only">
           <button
             className={cx('hamburger hamburger--collapse', {
               'is-active': this.state.isMobileMenuOpen,
@@ -170,7 +170,7 @@ class Navigation extends Component {
           className={
             this.state.isMobileMenuOpen
               ? 'open'
-              : 'tablet computer large screen widescreen only'
+              : 'computer large screen widescreen only'
           }
           onClick={this.closeMobileMenu}
         >
